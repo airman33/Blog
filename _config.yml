@@ -71,5 +71,6 @@ stylus:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:airman33/airman33.github.io.git
-  branch: master 
+  repo:
+    github: git@github.com:airman33/airman33.github.io.git,master
+    coding: git@git.coding.net:airman33/airman33.git,master 
