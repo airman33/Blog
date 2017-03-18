@@ -1,11 +1,12 @@
 ---
-title: 关于BufferedOutputStream写入数据丢失
-tags: 'BufferedOutputStream'
+title: BufferedOutputStream用法注意
+tags: 'Java IO'
 date: 2017-03-16 15:25:14
-categories: Java IO
+categories: Java基础-IO
 ---
 ### 问题
 使用封装了FileOutputStream的BufferedOutputStream进行write操作，当字节数组长度小于一定值时，写入文件失败。代码如下：
+<!--more-->
 
 	byte[] retByt;
 	………………
@@ -13,7 +14,7 @@ categories: Java IO
 	FileOutputStream fileOutput = new FileOutputStream(file);
 	BufferedOutputStream bufferedOutput = new BufferedOutputStream(fileOutput);
 	bufferedOutput.write(retByt);
-<!--more-->
+
 ### 溯源
     Class FilterOutputStream extends OutputStream{
 	
